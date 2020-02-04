@@ -33,17 +33,11 @@ class App extends React.Component {
               id: snapShot.id,
               ...snapShot.data()
             }
-          }, () => {
-              // this.state can't be seen out of setState() function, 
-              // so we log it in a callback function.
-              console.log(this.state);
-          }
-          );
+          });
         });
       }
       
-      
-      // console.log(user);
+      this.setState({ currentUser: userAuth });
     });
   }
 
